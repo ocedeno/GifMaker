@@ -209,6 +209,10 @@
                             <color key="tintColor" red="1" green="0.25490196079999999" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="Hx5-Iw-gBr" id="G63-BJ-BQU"/>
+                        <outlet property="gifImageView" destination="Idg-S9-dYE" id="a5A-cT-cz1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSQ-pK-rKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,6 +370,9 @@
                                     <constraint firstAttribute="width" constant="60" id="nKa-D8-wqn"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="createButton"/>
+                                <connections>
+                                    <action selector="launchCamera" destination="aXC-Xw-CZL" eventType="touchUpInside" id="1qj-Qs-WiD"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-6r-tbq">
                                 <rect key="frame" x="16" y="407" width="343" height="180"/>
@@ -470,6 +477,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GOk-gI-dlu"/>
                     <connections>
+                        <outlet property="gifImageView" destination="Wun-5B-Ruk" id="8Lx-sH-aWs"/>
                         <segue destination="gN0-HT-VRx" kind="show" identifier="showGifEditor" id="wkV-9i-gKS"/>
                     </connections>
                 </viewController>

@@ -10,6 +10,9 @@
 		06F4D9AB1E54920B0019E74C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4D9AA1E54920B0019E74C /* WelcomeViewController.swift */; };
 		06F4D9AD1E54929C0019E74C /* GifEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4D9AC1E54929C0019E74C /* GifEditorViewController.swift */; };
 		06F4D9AF1E5492B20019E74C /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4D9AE1E5492B20019E74C /* PreviewViewController.swift */; };
+		06F4D9B41E5496080019E74C /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4D9B31E5496080019E74C /* ViewControllerExtensions.swift */; };
+		06F4D9B61E549FB00019E74C /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4D9B51E549FB00019E74C /* UIImage+Gif.swift */; };
+		06F4D9B91E54A7FB0019E74C /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F4D9B81E54A7FB0019E74C /* Gif.swift */; };
 		A93B3B081D2D3F7900BE1662 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B041D2D3F7900BE1662 /* LaunchScreen.xib */; };
 		A93B3B091D2D3F7900BE1662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93B3B061D2D3F7900BE1662 /* Main.storyboard */; };
 		EDDFC4DC1CE261A600A586CA /* tinaFeyHiFive.gif in Resources */ = {isa = PBXBuildFile; fileRef = EDDFC4DB1CE261A600A586CA /* tinaFeyHiFive.gif */; };
@@ -25,6 +28,9 @@
 		06F4D9AA1E54920B0019E74C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		06F4D9AC1E54929C0019E74C /* GifEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifEditorViewController.swift; sourceTree = "<group>"; };
 		06F4D9AE1E5492B20019E74C /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		06F4D9B31E5496080019E74C /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		06F4D9B51E549FB00019E74C /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		06F4D9B81E54A7FB0019E74C /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		A93B3B051D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A93B3B071D2D3F7900BE1662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDDFC4DB1CE261A600A586CA /* tinaFeyHiFive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tinaFeyHiFive.gif; sourceTree = "<group>"; };
@@ -57,6 +63,23 @@
 				06F4D9AE1E5492B20019E74C /* PreviewViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		06F4D9B01E5495C00019E74C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				06F4D9B31E5496080019E74C /* ViewControllerExtensions.swift */,
+				06F4D9B51E549FB00019E74C /* UIImage+Gif.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		06F4D9B71E54A7E20019E74C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06F4D9B81E54A7FB0019E74C /* Gif.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A94CC3D61D21C84C00DC758E /* Supporting Files */ = {
@@ -98,8 +121,10 @@
 		EDFAA8EB1CDA99A500D2CB08 /* GifMaker_Swift_Template */ = {
 			isa = PBXGroup;
 			children = (
-				06F4D9A91E5491E10019E74C /* Controllers */,
 				EDFAA8EC1CDA99A500D2CB08 /* AppDelegate.swift */,
+				06F4D9B01E5495C00019E74C /* Utility */,
+				06F4D9A91E5491E10019E74C /* Controllers */,
+				06F4D9B71E54A7E20019E74C /* Model */,
 				A94CC3D71D21C85A00DC758E /* Assets */,
 				A94CC3D61D21C84C00DC758E /* Supporting Files */,
 				EDFAA9221CDA9C4700D2CB08 /* Regift Files */,
@@ -149,6 +174,7 @@
 				TargetAttributes = {
 					EDFAA8E81CDA99A500D2CB08 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = HC236JEG46;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -191,8 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F4D9B41E5496080019E74C /* ViewControllerExtensions.swift in Sources */,
 				EDFAA9201CDA9C3100D2CB08 /* Regift.swift in Sources */,
 				06F4D9AB1E54920B0019E74C /* WelcomeViewController.swift in Sources */,
+				06F4D9B61E549FB00019E74C /* UIImage+Gif.swift in Sources */,
+				06F4D9B91E54A7FB0019E74C /* Gif.swift in Sources */,
 				06F4D9AF1E5492B20019E74C /* PreviewViewController.swift in Sources */,
 				06F4D9AD1E54929C0019E74C /* GifEditorViewController.swift in Sources */,
 				EDFAA9211CDA9C3100D2CB08 /* RegiftCaption.swift in Sources */,
@@ -315,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HC236JEG46;
 				INFOPLIST_FILE = GifMaker_Swift_Template/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Udacity.GifMaker-Swift-Template";
@@ -327,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HC236JEG46;
 				INFOPLIST_FILE = GifMaker_Swift_Template/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Udacity.GifMaker-Swift-Template";

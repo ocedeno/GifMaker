@@ -363,7 +363,7 @@ private struct Group {
             do {
                 let imageRef = try generator.copyCGImage(at: time, actualTime: nil)
                 let imageRefWithCaption = addCaption(imageRef,text:caption, font:font)
-                CGImageDestinationAddImage(destination, imageRefWithCaption, frameProperties as CFDictionaryRef)
+                CGImageDestinationAddImage(destination, imageRefWithCaption, frameProperties as CFDictionary)
             } catch let error as NSError {
                 print("An error occurred: \(error)")
                 throw RegiftError.addFrameToDestination

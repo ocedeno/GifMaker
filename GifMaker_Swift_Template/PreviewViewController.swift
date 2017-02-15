@@ -10,6 +10,8 @@ import UIKit
 
 class PreviewViewController: UIViewController {
 
+    var gif: GIF?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
